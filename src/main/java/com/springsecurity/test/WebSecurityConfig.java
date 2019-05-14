@@ -11,7 +11,7 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 /**
  * Java配置的最基本示例
  */
-@EnableWebSecurity
+//@EnableWebSecurity
 public class WebSecurityConfig implements WebMvcConfigurer {
 
     /**
