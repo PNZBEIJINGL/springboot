@@ -1,4 +1,4 @@
-package com.springsecurity.test;
+package com.springsecurity.helloworld;
 
 
 import org.slf4j.Logger;

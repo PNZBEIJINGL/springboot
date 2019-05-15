@@ -1,4 +1,4 @@
-package com.springsecurity.test;
+package com.springsecurity.helloworld;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
