@@ -1,6 +1,4 @@
-package com.springsecurity.test;
-
-import org.springframework.security.web.context.AbstractSecurityWebApplicationInitializer;
+package com.springsecurity.helloworld;
 
 //public class SecurityWebApplicationInitializer extends AbstractSecurityWebApplicationInitializer {
 public class SecurityWebApplicationInitializer{
