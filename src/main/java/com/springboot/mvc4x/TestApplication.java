@@ -1,21 +1,18 @@
-package com.springsecurity.enable;
+package com.springboot.mvc4x;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-/**
- * EnableAutoConfiguration 关闭springsecurity默认验证
- */
-@SpringBootApplication(scanBasePackages = {"com.springsecurity.enable"})
+@SpringBootApplication(scanBasePackages = {"com.springboot.mvc4x"})
 @EnableAutoConfiguration(exclude = {
         org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class
 })
-public class NoSecurityApplication {
+public class TestApplication {
 
     public static void main(String[] args) {
 
-        SpringApplication.run(NoSecurityApplication.class, args);
+        SpringApplication.run(TestApplication.class, args);
     }
 
 }
