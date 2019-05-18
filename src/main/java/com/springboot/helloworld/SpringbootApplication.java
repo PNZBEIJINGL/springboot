@@ -1,6 +1,7 @@
 package com.springboot.helloworld;
 
 import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,6 +12,9 @@ import javax.swing.*;
 
 @RestController
 @SpringBootApplication(scanBasePackages = {"com.springboot.helloworld"})
+@EnableAutoConfiguration(exclude = {
+        org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration.class
+})//关闭Securitye
 public class SpringbootApplication {
 
     @RequestMapping("/")
