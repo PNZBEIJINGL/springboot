@@ -23,5 +23,9 @@ public class WebInitializer implements WebApplicationInitializer {
         Dynamic servlet = servletContext.addServlet("dispatcher", new DispatcherServlet(context));
         servlet.addMapping("/");
         servlet.setLoadOnStartup(1);
+
+        //通过设定jvm的spring.profiles.active参数来设置配置环境
+        servletContext.setInitParameter("spring.profiles.default","dev");
+
     }
 }

@@ -25,4 +25,6 @@ public class MyMvcConfig {
         viewResolver.setViewClass(JstlView.class);
         return viewResolver;
     }
+
+
 }
