@@ -2,11 +2,11 @@ package com.springboot.event;
 
 import org.springframework.context.ApplicationEvent;
 
-public class DemoEvent extends ApplicationEvent {
+public class MessageEvent extends ApplicationEvent {
 
     private String msg;
 
-    public DemoEvent(Object source, String msg) {
+    public MessageEvent(Object source, String msg) {
         super(source);
         this.msg = msg;
     }
