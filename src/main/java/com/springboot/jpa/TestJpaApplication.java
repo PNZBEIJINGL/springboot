@@ -6,7 +6,7 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @SpringBootApplication
-public class TestAppApplication{
+public class TestJpaApplication {
 
         public static void main(String[] args) {
 
