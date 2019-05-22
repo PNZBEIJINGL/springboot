@@ -28,7 +28,6 @@ public class TaskExcutorConfig implements AsyncConfigurer {
     }
 
     public AsyncUncaughtExceptionHandler getAsyncUncaughtExceptionHandler() {
-
         return null;
     }
 
