@@ -13,7 +13,7 @@ import java.util.Optional;
 
 @RunWith(SpringRunner.class)
 @SpringBootApplication
-
+//使用JUnit单元测试
 public class UserDaoTest {
     @Autowired
     private UserDao userDao;
