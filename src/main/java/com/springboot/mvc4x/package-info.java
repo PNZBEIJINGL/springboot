@@ -8,4 +8,6 @@ package com.springboot.mvc4x;
  * 在src/main/resources下面有两个文件夹，static和templates
  * springboot默认  static中放静态页面，而templates中放动态页面
  *
+ * Thymeleaf 是一个java类库， 它是一个xml/xhtml/html5的模板引擎
+ *
  */

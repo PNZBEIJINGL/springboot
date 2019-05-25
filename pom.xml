@@ -27,17 +27,22 @@
             <artifactId>spring-boot-starter-test</artifactId>
         </dependency>
 
-
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>4.0.0</version>
+        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
         </dependency>
 
-
+        <!--
         <dependency>
             <groupId>org.thymeleaf.extras</groupId>
             <artifactId>thymeleaf-extras-springsecurity4</artifactId>
         </dependency>
+        -->
 
         <!-- 配置后就会启动默认验证. 查看application.properties -->
         <!-- 可以通过设置取消验证 NoSecurityApplication -->
