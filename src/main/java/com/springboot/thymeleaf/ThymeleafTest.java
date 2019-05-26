@@ -21,11 +21,11 @@ public class ThymeleafTest {
 
     @RequestMapping("/thymeleaf")
     public String getThymeleaf(Model model) {
-        Person single = new Person("PNZ.orl", "30");
+        Person single = new Person("PNZ.orl", "20");
 
         List<Person> people = new ArrayList<Person>();
         people.add(new Person("PNZ.LIUY", "20"));
-        people.add(new Person("PNZ.BeijingL", "33"));
+        people.add(new Person("PNZ.BeijingL", "23"));
         people.add(new Person("PNZ.orcl", "29"));
 
         model.addAttribute("titlename", "=== Test INFO ===");
