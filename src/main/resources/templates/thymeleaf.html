@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- 1.必须有"<html xmlns:th="http://www.thymeleaf.org"> 否则thymeleaf引擎无法识别-->
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="shortcut icon" href="/favicon.ico"/>
+    <link rel="bookmark" href="/favicon.ico"/>
+    <link href="asserts/css/bootstrap.min.css" th:href="@{/webjars/bootstrap/4.0.0/css/bootstrap.css}" rel="stylesheet">
+    <link herf="asserts/css/signin.css" th:href="@{/asserts/css/signin.css}" rel="stylesheet">
+</head>
+<body>
+<!-- 2. ${} 访问model中的属性值-->
+<span th:text="${titlename}"></span>
+<span th:text="${name}"></span>
+
+<br>
+
+<div class="pannel pannel-primary">
+    <div class="pannel-heading">
+        <h3 class="pannel-title">访问MODEL</h3>
+    </div>
+    <div class="pannel-body">
+        <!-- 3. ${} 访问model中的对象的属性值-->
+        <span th:text="${singlePerson.name}"></span>
+    </div>
+</div>
+
+<!-- 4.使用 th:if 判断-->
+<div th:if="${not #lists.isEmpty(people)}">
+    <div class="pannel-heading">
+        <h3 class="pannel-title">列表</h3>
+    </div>
+    <div class="pannel-body">
+        <ul class="list-group">
+            <!-- 5.使用 th:each做循环迭代,person作为迭代元素-->
+            <li class="list-group-item" th:each="person:${people}">
+                <span th:text="${person.name}"/>
+                <span th:text="${person.age}"/>
+            </li>
+
+        </ul>
+
+    </div>
+</div>
+<div th:if="${not #lists.isEmpty(people1)}">
+    <div class="pannel-heading">
+        <h3 class="pannel-title">people1列表</h3>
+    </div>
+    <div class="pannel-body">
+        <ul class="list-group">
+            <li class="list-group-item" th:each="person:${people1}">
+                <span th:text="${singlePerson.name}"/>
+                <span th:text="${singlePerson.age}"/>
+            </li>
+        </ul>
+
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<!-- 必须有"<html xmlns:th="http://www.thymeleaf.org"> 否则thymeleaf引擎无法识别-->
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+在templates下,template一般放动态页面
+<p th:text="'Hello, ' + ${name} + '!'"/>
+</body>
+</html>
