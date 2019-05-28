@@ -12,7 +12,7 @@ public class UserController {
     @Autowired
     private UserDao userDao;
 
-    @RequestMapping("/addUser")
+    @RequestMapping("/addUse")
     public String addUser(Long id, String name, String code) {
         User user = new User();
         user.setId(id);

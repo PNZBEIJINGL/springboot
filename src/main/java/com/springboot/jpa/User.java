@@ -21,7 +21,7 @@ public class User {
     @Column(length = 50, nullable = true)
     private String name;
     @Column
-    private Date date;
+    private Date createDT;
 
     public Long getId() {
         return id;
@@ -47,11 +47,11 @@ public class User {
         this.name = name;
     }
 
-    public Date getDate() {
-        return date;
+    public Date getCreateDT() {
+        return createDT;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setCreateDT(Date createDT) {
+        this.createDT = createDT;
     }
 }
