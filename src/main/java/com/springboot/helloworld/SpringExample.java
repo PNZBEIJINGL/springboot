@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 //@EnableAutoConfiguration  //开启后自动注解
-@SpringBootApplication(scanBasePackages = {"com.springboot"})
+@SpringBootApplication(scanBasePackages = {"com.springboot.helloworld"})
 public class SpringExample {
 
     @RequestMapping("/home")

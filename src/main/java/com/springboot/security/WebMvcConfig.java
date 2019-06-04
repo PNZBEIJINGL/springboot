@@ -12,7 +12,7 @@ public class WebMvcConfig extends WebMvcConfigurerAdapter {
     public void addViewControllers(ViewControllerRegistry registry) {
 
         //注册访问/login, 转向login.html
-        registry.addViewController("/login").setViewName("login");
+       // registry.addViewController("/login").setViewName("login");
     }
 
 }
