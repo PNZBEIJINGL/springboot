@@ -6,14 +6,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
 
-@RestController("user")
+@RestController("uuser")
 public class UserController {
 
     @Autowired
     private UserDao userDao;
 
-    @RequestMapping("/addUser")
+    @RequestMapping("/jpa")
+    public String index() {
+
+        return "Hello JPA TESTING";
+    }
+  /*
+    @RequestMapping("/addUse")
     public String addUser(Long id, String name, String code) {
+        System.out.println("addUser");
         User user = new User();
         user.setId(id);
         user.setCode(code);
@@ -26,8 +33,11 @@ public class UserController {
 
     @RequestMapping("/get")
     public String getUser(Long id) {
+        System.out.println("getuser");
         Optional<User> result = userDao.findById(id);
         return result.get().toString();
 
     }
+
+    */
 }

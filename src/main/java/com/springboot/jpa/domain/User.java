@@ -1,7 +1,6 @@
-package com.springboot.jpa;
+package com.springboot.jpa.domain;
 
 import javax.persistence.*;
-import java.util.Date;
 
 /**
  * @Author: LIUY
@@ -12,7 +11,6 @@ import java.util.Date;
 public class User {
 
     @Id
-    @GeneratedValue
     private Long id;
     @Column(length = 50, nullable = false)
     private String code;
