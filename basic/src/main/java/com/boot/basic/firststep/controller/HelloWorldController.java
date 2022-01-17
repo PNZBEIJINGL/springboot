@@ -1,4 +1,4 @@
-package com.boot.controller;
+package com.boot.basic.firststep.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class HelloWorldController {
 
     //第一个测试
-    @RequestMapping("/helloworld")
-    public String index() {
-        return "HelloWorldController:Hello World";
+    @RequestMapping("/sayhi")
+    public String hello() {
+        return "HI:世界";
     }
 }

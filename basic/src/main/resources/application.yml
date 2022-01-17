@@ -1,3 +1,14 @@
+##YAML 规则
+#属性值为普通数据类型直接配置属性值，字符串不需要写引号
+
 server:
   ##使用端口
   port: 8080
+
+##自定义的配置
+project:
+  name: Demo for Spring Boot
+  version: 0.0.1
+  author:
+    name: PNZ.BeijingL
+    from: Beijing
