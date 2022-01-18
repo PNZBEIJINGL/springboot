@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName"><value>oracle.jdbc.driver.OracleDrive</value></property>
+        <property name="url"><value>jdbc:oracle:thin:@192.168.32.100:1521:starsms</value></property>
+        <property name="username"><value>MYTEST</value></property>
+        <property name="password"><value>MYTEST</value></property>
+    </bean>
+
+    <!-- 方式1.直接加载指定的bean -->
+    <!--
+    <bean id="FlywayMigration" class="com.star.FlywayMigration" init-method="migrate">
+        <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    -->
+
+    <!-- 方式2：flyway 配置 放到文件中-->
+    <bean id="flywaydb" class="org.flywaydb.core.Flyway" init-method="migrate">
+        <property name="dataSource" ref="dataSource"/>
+        <property name="encoding" value="UTF-8"/>
+        <property name="locations" value="db/migration"/>
+        <property name="baselineOnMigrate" value="true"/>
+        <property name="placeholderReplacement" value="false" />
+        <property name="baselineVersion" >
+            <bean class="org.flywaydb.core.api.MigrationVersion" factory-method="fromVersion">
+                <constructor-arg value="0"/>
+            </bean>
+        </property>
+    </bean>
+
+    <!--  方式3： 5.24 https://flywaydb.org/documentation/api/
+    <bean id="flywayConfig" class="org.flywaydb.core.api.configuration.ClassicConfiguration">
+        <property name="dataSource" ref="dataSource"/>
+        ...
+    </bean>
+
+    <bean id="flyway" class="org.flywaydb.core.Flyway" init-method="migrate">
+    </bean>
+
+    <bean id="sessionFactory" class="com.star" depends-on="flyway">
+        ...
+    </bean>
+    -->
+</beans>
