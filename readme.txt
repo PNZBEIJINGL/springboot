@@ -1,7 +1,4 @@
-资料
-《SpringBoot实战》
 
------------------------------------------------
 Spring Boot 是 Spring 开源组织下的子项目，是 Spring 组件一站式解决方案，主要是简化了使用 Spring 的难度，简省了繁重的配置，提供了各种启动器，开发者能快速上手
 
 
@@ -12,3 +9,9 @@ Spring Boot 是 Spring 开源组织下的子项目，是 Spring 组件一站式�
 @ComponentScan：Spring组件扫描。
 
 Spring Boot 优点非常多:独立运行,简化配置,自动配置,无代码生成和XML配置,应用监控,上手容易
+
+
+资料
+ Spring 官网 ： https://spring.io/projects/spring-boot
+《SpringBoot实战》
+《SpringBoot编程思想》

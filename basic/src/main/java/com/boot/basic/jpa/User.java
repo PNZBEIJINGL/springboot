@@ -1,5 +1,7 @@
 package com.boot.basic.jpa;
 
+import javax.persistence.*;
+
 /**
  * @Author: LIUY
  */
