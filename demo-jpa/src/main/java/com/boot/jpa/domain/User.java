@@ -1,17 +1,19 @@
-package com.boot.basic.jpa;
+package com.boot.jpa.domain;
 
-import javax.persistence.*;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @Author: LIUY
  */
 @Entity
-@Table(name = "USEREN1")
+@Table(name = "USEREN")
 //如果没有指定表名,表名和字段需要一致
 public class User {
 
     @Id
-    @GeneratedValue
     private Long id;
     @Column(length = 50, nullable = false)
     private String code;

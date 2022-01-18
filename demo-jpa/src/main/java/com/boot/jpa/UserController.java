@@ -1,4 +1,4 @@
-package com.boot.basic.jpa;
+package com.boot.jpa;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

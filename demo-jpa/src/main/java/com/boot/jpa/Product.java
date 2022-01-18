@@ -1,11 +1,13 @@
-package com.boot.basic.jpa.domain;
+package com.boot.jpa;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
 @Entity
 public class Product {
     @javax.persistence.Id
+    @GeneratedValue
     private String Id;
     private String name;
 
