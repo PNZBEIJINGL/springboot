@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/basic/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-actuator/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-flyway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-jpa/src/main/java" charset="UTF-8" />
   </component>

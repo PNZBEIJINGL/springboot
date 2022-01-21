@@ -12,6 +12,7 @@
         <option value="$PROJECT_DIR$/nacos/pom.xml" />
         <option value="$PROJECT_DIR$/jpa/pom.xml" />
         <option value="$PROJECT_DIR$/flyway/pom.xml" />
+        <option value="$PROJECT_DIR$/actuator/pom.xml" />
       </list>
     </option>
   </component>

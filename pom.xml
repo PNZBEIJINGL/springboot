@@ -19,6 +19,7 @@
 
     <modules>
         <module>basic</module>
+        <module>demo-actuator</module>
         <module>demo-jpa</module>
         <module>demo-nacos</module>
         <module>demo-flyway</module>
