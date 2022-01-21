@@ -6,9 +6,10 @@ Spring Boot 优点非常多:独立运行,简化配置,自动配置,无代码生�
 ---------------------------------------------------------------------------------
 
 basic: springboot 基本功能包括，配置、事假、任务、调度、监控、restful，mvc等
+demo-actuator: springboot + spring actuator admin
 demo-flyway: springboot+flyway 数据库管理
 demo-jpa : springboot + jpa
-demo-nocos : springboot +nacos配置中心
+demo-nacos : springboot +nacos配置中心
 
 ---------------------------------------------------------------------------------
 资料

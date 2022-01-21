@@ -12,7 +12,7 @@
     <artifactId>demo-nacos</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>demo-nacos</name>
-    <description>Demo project for Spring Boot +Nacos</description>
+    <description>Spring Boot +Nacos</description>
     <properties>
         <java.version>11</java.version>
     </properties>
