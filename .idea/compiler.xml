@@ -6,12 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="springboot" />
-        <module name="basic" />
         <module name="demo-actuator" />
-        <module name="demo-flyway" />
         <module name="demo-jpa" />
         <module name="demo-nacos" />
+        <module name="demo-flyway" />
+        <module name="springboot" />
+        <module name="basic" />
       </profile>
     </annotationProcessing>
   </component>

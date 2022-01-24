@@ -9,10 +9,10 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/basic/pom.xml" />
-        <option value="$PROJECT_DIR$/nacos/pom.xml" />
-        <option value="$PROJECT_DIR$/jpa/pom.xml" />
-        <option value="$PROJECT_DIR$/flyway/pom.xml" />
-        <option value="$PROJECT_DIR$/actuator/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-nacos/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-jpa/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-flyway/pom.xml" />
+        <option value="$PROJECT_DIR$/demo-actuator/pom.xml" />
       </list>
     </option>
   </component>
