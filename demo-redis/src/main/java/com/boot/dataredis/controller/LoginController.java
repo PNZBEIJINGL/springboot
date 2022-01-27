@@ -15,12 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LoginController {
 
+    private static Long index=1L;
+
     @Autowired
     private RedisTemplate redisTemplate;
 
     @GetMapping("/login")
     public String login(@RequestParam(value = "username", defaultValue = "zhangsan") String name) {
         User user = new User();
+        user.setId(index++);
         user.setName(name);
 
         redisTemplate.execute(new RedisCallback<Object>() {
@@ -28,7 +31,7 @@ public class LoginController {
             public Object doInRedis(RedisConnection connection)
                     throws DataAccessException {
 
-                byte[] key = redisTemplate.getStringSerializer().serialize("username."+name);
+                byte[] key = redisTemplate.getStringSerializer().serialize("user.id."+user.getId());
 
                 JdkSerializationRedisSerializer s = (JdkSerializationRedisSerializer) redisTemplate
                         .getValueSerializer();
@@ -45,13 +48,13 @@ public class LoginController {
     }
 
     @GetMapping("/get")
-    public String get(@RequestParam(value = "username", defaultValue = "zhangsan") String name) {
+    public String get(@RequestParam(value = "userid", defaultValue = "1") String userId) {
 
         Object object = redisTemplate.execute(new RedisCallback() {
 
             public Object doInRedis(RedisConnection connection)
                     throws DataAccessException {
-                byte[] key = redisTemplate.getStringSerializer().serialize("username."+name);
+                byte[] key = redisTemplate.getStringSerializer().serialize("user.id."+userId);
                 if (connection.exists(key)) {
                     byte[] value = connection.get(key);
 
