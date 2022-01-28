@@ -1,8 +1,8 @@
-package com.boot.dataredis.domain;
+package com.boot.redis.domain;
 
 import java.io.Serializable;
 
-public class User implements Serializable {
+public class UserDTO implements Serializable {
 
     private Long id;
     private String name;

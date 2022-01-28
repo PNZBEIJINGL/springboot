@@ -1,6 +1,7 @@
-package com.boot.dataredis.controller;
+package com.boot.redis.controller;
 
-import com.boot.dataredis.domain.User;
+
+import com.boot.redis.domain.UserDTO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataAccessException;
 import org.springframework.data.redis.connection.RedisConnection;
@@ -15,14 +16,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class LoginController {
 
-    private static Long index=1L;
+    //顺序生成ID,用于测试
+    private static Long index = 1L;
 
     @Autowired
     private RedisTemplate redisTemplate;
 
     @GetMapping("/login")
     public String login(@RequestParam(value = "username", defaultValue = "zhangsan") String name) {
-        User user = new User();
+        UserDTO user = new UserDTO();
         user.setId(index++);
         user.setName(name);
 
@@ -31,14 +33,11 @@ public class LoginController {
             public Object doInRedis(RedisConnection connection)
                     throws DataAccessException {
 
-                byte[] key = redisTemplate.getStringSerializer().serialize("user.id."+user.getId());
+                byte[] key = redisTemplate.getStringSerializer().serialize("user.id." + user.getId());
 
-                JdkSerializationRedisSerializer s = (JdkSerializationRedisSerializer) redisTemplate
-                        .getValueSerializer();
-                byte[] value = s.serialize(user);
+                JdkSerializationRedisSerializer s = (JdkSerializationRedisSerializer) redisTemplate.getValueSerializer();
 
-
-                connection.set(key, value);
+                connection.set(key, s.serialize(user));
                 System.out.println("add");
                 return null;
             }
@@ -54,12 +53,10 @@ public class LoginController {
 
             public Object doInRedis(RedisConnection connection)
                     throws DataAccessException {
-                byte[] key = redisTemplate.getStringSerializer().serialize("user.id."+userId);
+                byte[] key = redisTemplate.getStringSerializer().serialize("user.id." + userId);
                 if (connection.exists(key)) {
-                    byte[] value = connection.get(key);
-
                     JdkSerializationRedisSerializer s = (JdkSerializationRedisSerializer) redisTemplate.getValueSerializer();
-                    return s.deserialize(value);
+                    return s.deserialize(connection.get(key));
                 }
                 return null;
             }
@@ -68,7 +65,7 @@ public class LoginController {
         if (object == null) {
             return "null";
         } else {
-            return ((User) object).getName();
+            return ((UserDTO) object).getName();
         }
 
     }

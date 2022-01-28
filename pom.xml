@@ -23,6 +23,7 @@
         <module>demo-jpa</module>
         <module>demo-nacos</module>
         <module>demo-flyway</module>
+        <module>demo-redis</module>
     </modules>
 
     <properties>

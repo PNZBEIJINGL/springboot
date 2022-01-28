@@ -1,4 +1,4 @@
-package com.boot.dataredis.conf;
+package com.boot.redis.conf;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
