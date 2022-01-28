@@ -42,36 +42,25 @@
         <dependency>
             <groupId>org.flywaydb</groupId>
             <artifactId>flyway-core</artifactId>
-            <!--
-            <version>4.2.0</version>
-            -->
             <version>7.15.0</version>
         </dependency>
-        <!--
-               <dependency>
-                   <groupId>org.flywaydb</groupId>
-                   <artifactId>flyway-maven-plugin</artifactId>
-                   <version>8.4.2</version>
-               </dependency>
 
--->
-               <dependency>
-                   <groupId>org.junit.jupiter</groupId>
-                   <artifactId>junit-jupiter-api</artifactId>
-                   <version>5.8.2</version>
-                   <scope>test</scope>
-               </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.8.2</version>
+            <scope>test</scope>
+        </dependency>
 
+    </dependencies>
 
-           </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
 
-           <build>
-               <plugins>
-                   <plugin>
-                       <groupId>org.springframework.boot</groupId>
-                       <artifactId>spring-boot-maven-plugin</artifactId>
-                   </plugin>
-               </plugins>
-           </build>
-
-       </project>
+</project>
