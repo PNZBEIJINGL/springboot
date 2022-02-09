@@ -25,8 +25,9 @@ public class LoginController {
     @GetMapping("/login")
     public String login(@RequestParam(value = "username", defaultValue = "zhangsan") String name) {
         UserDTO user = new UserDTO();
-        user.setId(index++);
+        user.setCode(""+1000+index);
         user.setName(name);
+        user.setId(index++);
 
         redisTemplate.execute(new RedisCallback<Object>() {
             @Override
@@ -65,7 +66,7 @@ public class LoginController {
         if (object == null) {
             return "null";
         } else {
-            return ((UserDTO) object).getName();
+            return ((UserDTO) object).toString();
         }
 
     }
