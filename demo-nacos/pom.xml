@@ -5,7 +5,8 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.6.2</version>
+        <!-- 注意 spring boot 2.4之后删掉了ConfigurationBeanFactoryMetadata-->
+        <version>2.3.9.RELEASE</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.boot</groupId>
@@ -13,8 +14,10 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>demo-nacos</name>
     <description>Spring Boot +Nacos</description>
+
     <properties>
         <java.version>11</java.version>
+        <nacos-version>0.2.10</nacos-version>
     </properties>
 
     <dependencies>
@@ -31,9 +34,14 @@
         <dependency>
             <groupId>com.alibaba.boot</groupId>
             <artifactId>nacos-config-spring-boot-starter</artifactId>
-            <version>0.2.10</version>
+            <version>${nacos-version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.alibaba.boot</groupId>
+            <artifactId>nacos-discovery-spring-boot-starter</artifactId>
+            <version>${nacos-version}</version>
+        </dependency>
     </dependencies>
 
     <build>
