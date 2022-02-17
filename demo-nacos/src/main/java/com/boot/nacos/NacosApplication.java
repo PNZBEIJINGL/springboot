@@ -10,13 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.Date;
 
 @RestController
-@SpringBootApplication
 //@NacosPropertySource(dataId = "nacos-demo.yaml", autoRefreshed = true)
+@SpringBootApplication
 public class NacosApplication {
 
     public static void main(String[] args) {
-        //调用委托给Spring Boot的run方法
-        //SpringApplication引导启动spring,然后启动配置的tomcat容器
         SpringApplication.run(NacosApplication.class, args);
     }
 
