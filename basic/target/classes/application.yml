@@ -1,0 +1,35 @@
+##YAML 规则
+#属性值为普通数据类型直接配置属性值，字符串不需要写引号
+
+server:
+  port: 8080
+  tomcat:
+    uri-encoding: utf-8
+    max-connections: 500
+
+info:
+  groupid: springboot
+  artifactId: basic
+  version: 1.0-SNAPSHOT
+
+
+spring:
+  application:
+    name: Spring Boot CORE
+  boot:
+    admin:
+      client:
+        instance:
+          name: Demo for Spring boot core
+          service-base-url: http://localhost:8001
+        url: http://localhost:8001
+
+
+##自定义属性用于测试
+project:
+  name: Demo for Spring Boot
+  version: 0.0.1
+  author:
+    name: PNZ.BeijingL
+    from: StarCraft PNZ TEAM
+
