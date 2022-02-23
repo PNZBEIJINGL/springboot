@@ -10,7 +10,14 @@ demo-actuator: springboot + spring actuator admin
 demo-flyway: springboot+flyway 数据库管理
 demo-jpa : springboot + jpa
 demo-nacos : springboot +nacos配置中心
-
+demo-redis : springboot +redis缓存
+---------------------------------------------------------------------------------
+Git : 2.33.0.windows.1
+JDK : 11.0.2
+Gradl: gradle-5.6.4
+Redis: Redis-x64-3.2.100
+Mysql: mysql-5.7.30-winx64
+Nacos: nacos-server-2.0.0
 ---------------------------------------------------------------------------------
 资料
  Spring 官网 ： https://spring.io/projects/spring-boot

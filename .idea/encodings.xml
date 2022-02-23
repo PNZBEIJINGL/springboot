@@ -7,5 +7,8 @@
     <file url="file://$PROJECT_DIR$/demo-flyway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-jpa/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo-nacos/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-webservice/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo-webservice/src/main/resources" charset="UTF-8" />
   </component>
 </project>

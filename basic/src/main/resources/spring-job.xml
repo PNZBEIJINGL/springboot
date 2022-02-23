@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd" default-lazy-init="false">
+
+    <bean id="autoCancelProduct" class="com.boot.basic.scheduled.AutoCancelProduct">
+
+    </bean>
+
+
+    <bean id="autoCancelProductDetail" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+        <property name="name" value="autoCancelProductDetail"/>
+        <property name="group" value="Order_Trigger_Group"/>
+        <property name="targetObject" ref="autoCancelProduct"/>
+        <property name="targetMethod" value="executeJob"/>
+        <property name="concurrent" value="false"/>
+    </bean>
+
+    <bean id="autoCancelProductTrigger" class="org.springframework.scheduling.quartz.CronTriggerFactoryBean">
+        <property name="name" value="autoCancelProductTrigger"/>
+        <property name="group" value="Order_Trigger_Group"/>
+        <property name="jobDetail" ref="autoCancelProductDetail"/>
+        <property name="cronExpression" value="* 0/2 * * * ? 2099"/>
+    </bean>
+
+<!--    <bean id="cancelSchedue" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+        <property name="triggers">
+            <list>
+                <ref bean="autoCancelProductTrigger"/>
+            </list>
+        </property>
+    </bean>-->
+
+</beans>

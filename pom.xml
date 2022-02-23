@@ -25,6 +25,7 @@
         <module>demo-nacos</module>
         <module>demo-flyway</module>
         <module>demo-redis</module>
+        <module>demo-webservice</module>
     </modules>
 
     <properties>

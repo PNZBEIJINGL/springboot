@@ -13,10 +13,12 @@
         <option value="$PROJECT_DIR$/demo-jpa/pom.xml" />
         <option value="$PROJECT_DIR$/demo-flyway/pom.xml" />
         <option value="$PROJECT_DIR$/demo-actuator/pom.xml" />
+        <option value="$PROJECT_DIR$/data-redis/pom.xml" />
+        <option value="$PROJECT_DIR$/redis/pom.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="false" project-jdk-name="11.0.5" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="11.0.2-2" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>
