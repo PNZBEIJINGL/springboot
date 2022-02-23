@@ -19,10 +19,12 @@ public class ScheduledTaskService {
         System.out.println("间隔5秒执行："+dataFormat.format(new Date()));
     }
 
-    @Scheduled(cron = "0/1 * * * * ?")
+    //@Scheduled(cron = "0/1 * * * * ?")
+    @Scheduled(cron = "-")
     public void fixTimeExecution(){
         //@Scheduled 不支持7位,即不支持年
         //异常: Cron expression must consist of 6 fields (found 7 in "0/1 * * * * ? 2099")
+        //@Scheduled(cron = "-")   不启动任务
         System.out.println("指定时间执行："+dataFormat.format(new Date()));
     }
 
