@@ -36,9 +36,8 @@ public class AutoOrderProductConfig {
 
     @Bean("myScheduler")
     public SchedulerFactoryBean getSchedulerFactoryBean() {
-        CronTriggerImpl bean=SpringUtil.getBean("jobTrigger");
         SchedulerFactoryBean schedulerFactoryBean = new SchedulerFactoryBean();
-        schedulerFactoryBean.setTriggers(bean);
+        schedulerFactoryBean.setTriggers((CronTriggerImpl)SpringUtil.getBean("jobTrigger"));
         return schedulerFactoryBean;
     }
 
