@@ -11,7 +11,9 @@ import org.codehaus.xfire.DefaultXFire;
 import org.codehaus.xfire.XFire;
 import org.codehaus.xfire.service.ServiceFactory;
 import org.codehaus.xfire.service.binding.ObjectServiceFactory;
+import org.codehaus.xfire.spring.XFireSpringServlet;
 import org.codehaus.xfire.spring.remoting.XFireExporter;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -30,6 +32,12 @@ public class XfireXMLConfiguration {
     @Bean
     public HttpServlet httpServlet() {
         return new SpringProxyServlet();
+    }
+
+    @Bean
+    public ServletRegistrationBean servletRegistrationBean() {
+        //WEB.XML: web servlet configuration
+        return new ServletRegistrationBean(new XFireSpringServlet(), "/webservice/*");
     }
 
 
