@@ -1,12 +1,6 @@
 package com.boot.web.xfire;
 
 import cn.hutool.extra.spring.SpringUtil;
-import com.boot.web.IQueryService;
-import com.boot.web.QueryServiceImpl;
-import com.boot.web.xfire.SpringProxyServlet;
-import com.boot.web.xfire.XFireFaultLoggingHandler;
-import com.boot.web.xfire.XFireRequestLoggingHandler;
-import com.boot.web.xfire.XFireResponseLoggingHandler;
 import org.codehaus.xfire.DefaultXFire;
 import org.codehaus.xfire.XFire;
 import org.codehaus.xfire.service.ServiceFactory;
@@ -16,10 +10,13 @@ import org.codehaus.xfire.spring.remoting.XFireExporter;
 import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.web.servlet.handler.SimpleUrlHandlerMapping;
 
 import javax.servlet.http.HttpServlet;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * Xfire Configuration for WebService
@@ -40,13 +37,22 @@ public class XfireXMLConfiguration {
         return new ServletRegistrationBean(new XFireSpringServlet(), "/webservice/*");
     }
 
+    @Bean("defaultHandlerMapping")
+    public SimpleUrlHandlerMapping defaultHandlerMapping() throws ClassNotFoundException {
+        SimpleUrlHandlerMapping defaultHandlerMapping = new SimpleUrlHandlerMapping();
+        Map urlMap = new HashMap();
+        urlMap.put("/InfoQueryService", SpringUtil.getBean("testQueyService_xfire"));
+        defaultHandlerMapping.setUrlMap(urlMap);
+        return defaultHandlerMapping;
+    }
+
 
     @Bean("testQueyService_xfire")
     public XFireExporter getInfoQueryServiceImp_xfire() throws ClassNotFoundException {
         XFireExporter xFireExporter = xFireExporter();
-        xFireExporter.setServiceBean(SpringUtil.getBean("queryService"));
-        xFireExporter.setServiceClass(Class.forName("com.boot.web.IQueryService"));
-        xFireExporter.setName("queryService");
+        xFireExporter.setServiceBean(SpringUtil.getBean("infoQueryServiceImp"));
+        xFireExporter.setServiceClass(Class.forName("com.boot.web.service.IInfoQueryService"));
+        xFireExporter.setName("InfoQueryService");
         return xFireExporter;
     }
 
