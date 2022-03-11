@@ -26,6 +26,7 @@
         <module>demo-flyway</module>
         <module>demo-redis</module>
         <module>demo-webservice</module>
+        <module>demo-swagger</module>
     </modules>
 
     <properties>
