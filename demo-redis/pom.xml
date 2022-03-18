@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.boot</groupId>
     <artifactId>demo-redis</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>demo-redis</name>
     <description>Demo project for Spring Boot + SpringData Redis</description>
 
@@ -39,6 +39,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
+        <!-- Admin Client -->
+        <dependency>
+            <groupId>de.codecentric</groupId>
+            <artifactId>spring-boot-admin-starter-client</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <!-- Admin Client -->
 
         <dependency>
             <groupId>org.springframework.boot</groupId>

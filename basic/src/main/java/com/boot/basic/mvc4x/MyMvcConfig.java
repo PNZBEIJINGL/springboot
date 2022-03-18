@@ -10,7 +10,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc  //自动开启默认配置
-@ComponentScan("com.springboot.mvc4x")
+@ComponentScan("com.boot.basic.mvc4x")
 public class MyMvcConfig {
 
     /**
