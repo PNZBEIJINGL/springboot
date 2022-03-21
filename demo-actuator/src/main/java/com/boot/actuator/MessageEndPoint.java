@@ -8,8 +8,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Configuration
-@Endpoint(id = "test-endpoint")
-public class TestEndPoint {
+@Endpoint(id = "message-endpoint")
+public class MessageEndPoint {
 
 
     //@EndPoint中的id不能使用驼峰法，需要以-分割

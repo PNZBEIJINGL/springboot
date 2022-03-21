@@ -2,6 +2,9 @@ package com.boot.actuator;
 
 import org.springframework.stereotype.Service;
 
+/**
+ * 自定义端点：状态服务
+ */
 @Service
 public class StatusService {
 

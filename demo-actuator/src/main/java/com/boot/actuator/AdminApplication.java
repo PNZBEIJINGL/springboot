@@ -4,12 +4,11 @@ import de.codecentric.boot.admin.server.config.EnableAdminServer;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
-@EnableAdminServer
+@EnableAdminServer  //开启Admin监控
 @SpringBootApplication(scanBasePackages = {"com.boot.actuator"})
-public class ActuatorApplication {
+public class AdminApplication {
+
     public static void main(String[] args) {
-
-        new SpringApplicationBuilder(ActuatorApplication.class).run(args);
-
+        new SpringApplicationBuilder(AdminApplication.class).run(args);
     }
 }
