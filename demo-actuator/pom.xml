@@ -34,12 +34,6 @@
             <artifactId>spring-boot-devtools</artifactId>
         </dependency>
 
-
-        <!-- 开启监控Actuator-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
         <!-- 引入Spring Boot Admin-->
         <dependency>
             <groupId>de.codecentric</groupId>
