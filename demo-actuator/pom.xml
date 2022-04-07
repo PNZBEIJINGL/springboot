@@ -8,9 +8,10 @@
         <version>2.6.2</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
+
     <groupId>com.boot</groupId>
     <artifactId>demo-actuator</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.1</version>
     <name>demo-actuator</name>
     <description>Spring Boot + Actuator Admin</description>
     <properties>
