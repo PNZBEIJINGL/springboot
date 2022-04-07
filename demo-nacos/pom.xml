@@ -28,8 +28,8 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <!-- Admin客户端-->
-        <!-- https://mvnrepository.com/artifact/de.codecentric/spring-boot-admin-client -->
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-client</artifactId>
