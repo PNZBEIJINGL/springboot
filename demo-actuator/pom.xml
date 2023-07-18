@@ -39,7 +39,7 @@
         <dependency>
             <groupId>de.codecentric</groupId>
             <artifactId>spring-boot-admin-server</artifactId>
-            <version>2.6.0</version>
+            <version>3.1.2</version>
         </dependency>
         <!-- 引入Spring Boot Admin SERVICE UI 封装了一个Web应用程序-->
         <dependency>
